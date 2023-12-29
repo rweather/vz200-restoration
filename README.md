@@ -27,14 +27,17 @@ Please let me know if it works when you test it."
 * [Bushy's VZ200 website](http://www.vz200.org/bushy/)
 * [VZ200 Technical Reference Manual](http://www.vz200.org/bushy/VZ200_technical_reference_manual.pdf) from Bushy's website.
 
-## Schematic
+## Schematics
 
-I have reproduced the schematic from the VZ200 Technical Reference Manual in
-KiCad and generated a [PDF](schematics/VZ200/PDF/VZ200.pdf) version.
-The original schematic can be hard to read.
+I have reproduced the schematics from the VZ200 Technical Reference Manual in
+KiCad and generated PDF versions.  The original schematics can be hard to read.
 
-Note: The schematic includes components for the PAL encoder that were on
-a separate PCB in the original schematic.
+* [VZ200 Motherboard](schematics/VZ200/PDF/VZ200.pdf)
+* [Printer Interface](schematics/VZ200_Printer_Interface/PDF/VZ200_Printer_Interface.pdf)
+* [16K Memory Expansion Module](schematics/VZ200_16K_RAM_Expansion/PDF/VZ200_16K_RAM_Expansion.pdf)
+
+Note: The motherboard schematic includes components for the PAL encoder
+and 6K of Program RAM that were on separate PCB's in the original design.
 
 There is a lot of missing detail in the manual.  Many of the components do
 not have designators, so there is no way to know if a resistor was originally
@@ -43,7 +46,8 @@ In some cases, the component value is not provided.
 
 For components without a designator, I made up numbers starting at 900;
 e.g. R906, C912, U904, etc.  For components without a known value, I listed
-the value as "???".
+the value as "???".  I was able to determine some of the values by inspecting
+the actual PCB.
 
 ## Adapting the schematic
 

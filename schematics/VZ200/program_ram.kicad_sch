@@ -1447,8 +1447,8 @@
     (uuid ff70a704-646f-498f-839f-b759bc57bb45)
   )
 
-  (text "The original schematic listed these chips as U1' - U4'\nThey have been renumbered to U101 - U104 here."
-    (at 142.875 135.255 0)
+  (text "The original schematic listed these chips as U1' - U4'\nThey have been renumbered to U101 - U104 here.  The 6K of\nProgram RAM is on a separate PCB for the VZ200.\n\nThe Laser 210 only had 2K of Program RAM, which corresponds\nto U102 in this schematic.  U101, U103, and U104 are not\npresent on the Laser 210."
+    (at 135.89 144.78 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 204d0123-2b3f-4b51-ab87-a476d59ee0ac)
   )
@@ -1456,8 +1456,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 28509b3f-0394-4e9d-9152-8dea311ba5c3)
   )
-  (text "6 KB of Program RAM\n\nSchematic Redrawn by Rhys Weatherley"
-    (at 184.785 176.53 0)
+  (text "Program RAM\n\nSchematic Redrawn by Rhys Weatherley" (at 184.785 176.53 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid d5908f71-da81-4921-b985-30a3d1208302)
   )
