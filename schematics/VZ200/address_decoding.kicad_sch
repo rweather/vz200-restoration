@@ -2399,7 +2399,8 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 6b2324e4-d959-408f-add5-523a6ce80d66)
   )
-  (text "Address Decoding and I/O" (at 182.245 174.625 0)
+  (text "Address Decoding and I/O\n\nSchematic Redrawn by Rhys Weatherley"
+    (at 182.245 176.53 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 6e812c57-5b4b-4e00-916c-29d5c4775ea1)
   )

@@ -1668,7 +1668,8 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 2616750e-b5c9-4aab-868a-cb6f17051cb3)
   )
-  (text "Video Display Generator and 2K of Display RAM" (at 182.245 175.26 0)
+  (text "Video Display Generator and 2K of Display RAM\n\nSchematic Redrawn by Rhys Weatherley"
+    (at 182.245 176.53 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 33a074bc-dda2-4778-9fd8-bf927d103e23)
   )

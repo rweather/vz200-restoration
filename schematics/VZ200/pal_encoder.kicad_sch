@@ -2244,7 +2244,8 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 16331c75-675e-4e63-a7a5-9dee4603a76d)
   )
-  (text "PAL encoder for the video chroma signals" (at 184.785 175.26 0)
+  (text "PAL encoder for the video chroma signals\n\nSchematic Redrawn by Rhys Weatherley"
+    (at 184.785 176.53 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 2778889a-a0c9-4de8-9191-1317845a4f2a)
   )

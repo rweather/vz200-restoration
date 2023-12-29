@@ -1456,7 +1456,8 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 28509b3f-0394-4e9d-9152-8dea311ba5c3)
   )
-  (text "6 KB of Program RAM" (at 184.785 174.625 0)
+  (text "6 KB of Program RAM\n\nSchematic Redrawn by Rhys Weatherley"
+    (at 184.785 176.53 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid d5908f71-da81-4921-b985-30a3d1208302)
   )

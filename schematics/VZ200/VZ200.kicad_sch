@@ -2431,8 +2431,8 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 2ea2cd59-ba28-4af9-bb06-64c6fcb284d8)
   )
-  (text "Microprocessor, ROM's, Power Supply, Clock, and Reset"
-    (at 185.42 174.625 0)
+  (text "Microprocessor, ROM's, Power Supply, Clock, and Reset\n\nSchematic Redrawn by Rhys Weatherley"
+    (at 185.42 176.53 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 565a4b1f-826c-4b46-947e-af2f894cd8f6)
   )

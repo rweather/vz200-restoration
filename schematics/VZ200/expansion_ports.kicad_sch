@@ -1514,7 +1514,8 @@
     (uuid fea44363-646a-455f-93da-e97489ab66c3)
   )
 
-  (text "Expansion Ports" (at 185.42 175.26 0)
+  (text "Expansion Ports\n\nSchematic Redrawn by Rhys Weatherley"
+    (at 185.42 176.53 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 00a79255-d8c8-4822-ab2f-c96e4abe0b75)
   )

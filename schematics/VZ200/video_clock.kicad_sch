@@ -2443,7 +2443,8 @@
     (uuid ffbfb555-7ab1-4170-ab8f-635678196fc0)
   )
 
-  (text "Video Clock Generator and Composite Video Output" (at 180.34 175.895 0)
+  (text "Video Clock Generator and Composite Video Output\n\nSchematic Redrawn by Rhys Weatherley"
+    (at 180.34 177.165 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid c74aaaee-2969-441c-8d69-07c1056c17e0)
   )
