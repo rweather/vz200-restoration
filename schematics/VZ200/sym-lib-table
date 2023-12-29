@@ -1,0 +1,6 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "RAM_6116")(type "KiCad")(uri "${KIPRJMOD}/RAM_6116.kicad_sym")(options "")(descr ""))
+  (lib (name "VDG_MC6847")(type "KiCad")(uri "${KIPRJMOD}/VDG_MC6847.kicad_sym")(options "")(descr ""))
+  (lib (name "PAL_Encoder_TBA520")(type "KiCad")(uri "${KIPRJMOD}/PAL_Encoder_TBA520.kicad_sym")(options "")(descr ""))
+)

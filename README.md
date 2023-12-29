@@ -5,6 +5,11 @@ This repository chronicles my exploits in restoring a Dick Smith VZ200
 that I got off eBay.  The VZ200 is a rebadged VTech Laser 200, which was
 sold in Australia from 1983 onwards.
 
+The eBay seller Ben had this to say about the unit: "It was an op-shop
+pickup from my Nan and had been in storage in a plastic container for who
+knows how long.  As it did not have any leads I never tested it.
+Please let me know if it works when you test it."
+
 ## Technical specifications
 
 * Z80A 8-bit CPU, running at 3.58MHz.
@@ -21,3 +26,58 @@ sold in Australia from 1983 onwards.
 * [vz200.org](http://vz200.org/)
 * [Bushy's VZ200 website](http://www.vz200.org/bushy/)
 * [VZ200 Technical Reference Manual](http://www.vz200.org/bushy/VZ200_technical_reference_manual.pdf) from Bushy's website.
+
+## Schematic
+
+I have reproduced the schematic from the VZ200 Technical Reference Manual in
+KiCad and generated a [PDF](schematics/VZ200/PDF/VZ200.pdf) version.
+The original schematic can be hard to read.
+
+Note: The schematic includes components for the PAL encoder that were on
+a separate PCB in the original schematic.
+
+There is a lot of missing detail in the manual.  Many of the components do
+not have designators, so there is no way to know if a resistor was originally
+R1, R63, or R128.  The PCB does not have a silkscreen marking the components.
+In some cases, the component value is not provided.
+
+For components without a designator, I made up numbers starting at 900;
+e.g. R906, C912, U904, etc.  For components without a known value, I listed
+the value as "???".
+
+## Adapting the schematic
+
+In theory the KiCad schematic could be modernised and then laid out on a
+brand new PCB.  But a lot of work would be required to add footprints
+and lay everything out.  Some of the components are pretty ancient
+and would need modern replacements.
+
+It would be nice to be able to build a brand new VZ200 from modern components.
+I haven't attempted to do this, but others are welcome to try.  Here is a
+list of things to fix:
+
+* Replace the 6K of program RAM and the 16K memory expansion module with a
+single 32K static RAM chip on-board like the 62256.
+* The 2K of video memory is on a separate data and address bus,
+so it will probably need special handling.
+* Replace the two 8K EPROM's with a modern 16K or 32K EEPROM.
+* The MC6847 Video Display Generator (VDG) has additional graphics modes
+that were not accessible with the original design.  Some people have
+already modified their VZ200's to access these modes.
+* The chiclet keyboard is horrible, but a lot of software depends upon
+the specific arrangement of buttons in the key matrix.  Consider replacing
+with mechanical key switches, but the same matrix arrangement.
+* If you have FPGA skills, then consider replacing the MC6847 with an
+alternative that puts out standard RGB or HDMI video instead of
+composite video.
+* 100nF filter capacitors near each chip.  The original didn't have any!
+
+## License
+
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">VZ200 Restoration</span> by <span property="cc:attributionName">Rhys Weatherley</span> is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-ShareAlike 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p>
+
+## Contact
+
+For more information on this project, to report bugs, or to suggest
+improvements, please contact the author Rhys Weatherley via
+[email](mailto:rhys.weatherley@gmail.com).
