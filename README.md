@@ -2,13 +2,12 @@ VZ200 Restoration
 =================
 
 This repository chronicles my exploits in restoring a Dick Smith VZ200
-that I got off eBay.  The VZ200 is a rebadged VTech Laser 200, which was
+that I got off eBay.  The VZ200 is a rebadged VTech Laser 210, which was
 sold in Australia from 1983 onwards.
 
 The eBay seller Ben had this to say about the unit: "It was an op-shop
 pickup from my Nan and had been in storage in a plastic container for who
-knows how long.  As it did not have any leads I never tested it.
-Please let me know if it works when you test it."
+knows how long.  As it did not have any leads I never tested it."
 
 ## Technical specifications
 
@@ -19,6 +18,12 @@ Please let me know if it works when you test it."
 * 45 key chiclet keyboard organized in a 6x8 matrix.
 * Motorola 6847 video processor.
 * RF and composite video output.
+
+Note: The VZ300 is essentially the same computer except that it has 16K of
+user program RAM on-board and a mechanical keyboard.
+
+Outside of Australia and New Zealand, the VZ200 and VZ300 were known as the
+Laser 210 and Laser 310 respectively.
 
 ## Resources
 
@@ -60,7 +65,7 @@ It would be nice to be able to build a brand new VZ200 from modern components.
 I haven't attempted to do this, but others are welcome to try.  Here is a
 list of things to fix:
 
-* Replace the 6K of program RAM and the 16K memory expansion module with a
+* Replace the 6K of program RAM plus the 16K memory expansion module with a
 single 32K static RAM chip on-board like the 62256.
 * The 2K of video memory is on a separate data and address bus,
 so it will probably need special handling.
@@ -70,11 +75,38 @@ that were not accessible with the original design.  Some people have
 already modified their VZ200's to access these modes.
 * The chiclet keyboard is horrible, but a lot of software depends upon
 the specific arrangement of buttons in the key matrix.  Consider replacing
-with mechanical key switches, but the same matrix arrangement.
+with mechanical key switches like on the VZ300, but the same matrix
+arrangement.
 * If you have FPGA skills, then consider replacing the MC6847 with an
 alternative that puts out standard RGB or HDMI video instead of
 composite video.
 * 100nF filter capacitors near each chip.  The original didn't have any!
+
+## Acknowledgements
+
+I was inspired to try my hand at restoring a vintage 1980's computer by the
+following YouTubers:
+
+* [Adrian's Digital Basement](https://www.youtube.com/@adriansdigitalbasement)
+* [Artic Retro](https://www.youtube.com/@Arcticretro)
+* [Noel's Retro Lab](https://www.youtube.com/@NoelsRetroLab)
+* [The 8-Bit Guy](https://www.youtube.com/@The8BitGuy)
+* [Usagi Electric](https://www.youtube.com/@UsagiElectric)
+
+Artic Retro in particular is an expert in VZ200 / Laser 210 computers.
+
+Thanks for sharing the enthusiam and teaching me so much!
+
+## History
+
+My first computer was a Dick Smith Cat, which was a rebadged Laser 3000.
+Mine died a long time ago and I sent it to the dump.  I now wish I hadn't!
+The VZ200 I found on eBay is probably the closest I will come to my
+beloved Cat - it is a similar vintage.
+
+If anyone has a Dick Smith Cat or a Laser 3000, working or not, and are
+willing to part with it, then please contact me via
+[email](mailto:rhys.weatherley@gmail.com).
 
 ## License
 
