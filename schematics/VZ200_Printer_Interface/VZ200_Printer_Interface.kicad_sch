@@ -4,6 +4,12 @@
 
   (paper "A4")
 
+  (title_block
+    (title "VZ200 Printer Interface")
+    (date "2024-01-01")
+    (rev "1")
+  )
+
   (lib_symbols
     (symbol "74xx:74LS138" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
       (property "Reference" "U" (at -7.62 11.43 0)

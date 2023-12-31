@@ -4,6 +4,12 @@
 
   (paper "A4")
 
+  (title_block
+    (title "VZ200 16K Memory Expansion Module")
+    (date "2024-01-01")
+    (rev "1")
+  )
+
   (lib_symbols
     (symbol "Device:C" (pin_numbers hide) (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
       (property "Reference" "C" (at 0.635 2.54 0)

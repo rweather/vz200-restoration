@@ -4,6 +4,12 @@
 
   (paper "A4")
 
+  (title_block
+    (title "VZ200 Computer")
+    (date "2024-01-01")
+    (rev "1")
+  )
+
   (lib_symbols
     (symbol "6116_2K_x_8_Static_RAM_1" (in_bom yes) (on_board yes)
       (property "Reference" "U" (at 3.81 2.54 0)
