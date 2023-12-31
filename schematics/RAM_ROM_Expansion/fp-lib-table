@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "VZ200_Cartridge_Port")(type "KiCad")(uri "${KIPRJMOD}/VZ200_Cartridge_Port.pretty")(options "")(descr ""))
+)

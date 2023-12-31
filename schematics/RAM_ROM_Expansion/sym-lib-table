@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "VZ200_Cartridge_Ports")(type "KiCad")(uri "${KIPRJMOD}/VZ200_Cartridge_Ports.kicad_sym")(options "")(descr ""))
+)
