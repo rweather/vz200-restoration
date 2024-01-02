@@ -54,6 +54,11 @@ e.g. R906, C912, U904, etc.  For components without a known value, I listed
 the value as "???".  I was able to determine some of the values by inspecting
 the actual PCB.
 
+## Other documentation
+
+* [VZ200 startup sequence](doc/startup-sequence.md)
+* [Useful Memory Locations](doc/useful-locations.md)
+
 ## Adapting the schematic
 
 In theory the KiCad schematic could be modernised and then laid out on a

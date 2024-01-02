@@ -493,12 +493,15 @@ static void dump_instruction(FILE *out, unsigned address, const char *insn, cons
 static const char *map_rom_routine(unsigned address)
 {
     switch (address) {
+    case 0x0049: return "Keybaord Get Character";
     case 0x01C9: return "Clear Screen";
     case 0x033A: return "Character Output";
     case 0x058D: return "Print Character";
     case 0x05C4: return "Check Printer Status";
+    case 0x1A19: return "Enter BASIC";
     case 0x28A7: return "String Output";
-    case 0x2EF4: return "Scan Keyboard";
+    case 0x2EF4: return "Keyboard Scan";
+    case 0x2EFD: return "Keyboard Scan Once";
     case 0x3450: return "Beep";
     case 0x345C: return "Sound Output";
     case 0x3AE2: return "Print CRLF";
