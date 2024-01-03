@@ -312,6 +312,9 @@ static const char * const basic_token_names[128] = {
 static unsigned char data[65536];
 static size_t data_len = 0;
 
+/* Addresses of token handling routines in the BASIC ROM */
+static unsigned token_handler[128];
+
 static unsigned char const header_cartridge[] = {0xAA, 0x55, 0xE7, 0x18};
 static unsigned char const header_rom0[] = {0xF3, 0xAF, 0x32, 0x00, 0x68};
 static unsigned char const header_rom1[] = {0x2d, 0x38, 0x02, 0x1E};
@@ -319,6 +322,7 @@ static unsigned char const header_vzfile1[] = {0x56, 0x5a, 0x46, 0x30};
 static unsigned char const header_vzfile2[] = {0x20, 0x20, 0x00, 0x00};
 
 static void disassemble(FILE *out, unsigned address, const unsigned char *data, size_t len);
+static void load_basic_tokens(const unsigned char *data);
 static void list_basic(FILE *out, const unsigned char *data, size_t len);
 
 static int is_magic(const unsigned char *magic, size_t len)
@@ -364,6 +368,7 @@ int main(int argc, char *argv[])
     } else if (is_magic(header_rom0, sizeof(header_rom0))) {
         /* Looks like the standard VZ U9 ROM at address 0x0000 */
         address = 0x0000;
+        load_basic_tokens(data);
         disassemble(stdout, address, data, data_len);
     } else if (is_magic(header_rom1, sizeof(header_rom1))) {
         /* Looks like the standard VZ U10 ROM at address 0x2000 */
@@ -493,20 +498,50 @@ static void dump_instruction(FILE *out, unsigned address, const char *insn, cons
 static const char *map_rom_routine(unsigned address)
 {
     switch (address) {
-    case 0x0049: return "Keybaord Get Character";
+    case 0x0000: return "Reset Vector";
+    case 0x0008: return "RST $08";
+    case 0x0010: return "RST $10";
+    case 0x0018: return "RST $18";
+    case 0x0020: return "RST $20";
+    case 0x0028: return "RST $28";
+    case 0x0030: return "RST $30";
+    case 0x0038: return "RST $38 - Interrupt Vector";
+    case 0x0049: return "Keyboard Get";
+    case 0x0050: return "Screen Get Character";
     case 0x01C9: return "Clear Screen";
     case 0x033A: return "Character Output";
     case 0x058D: return "Print Character";
     case 0x05C4: return "Check Printer Status";
+    case 0x06A0: return "Enable Interrupts and Enter BASIC";
     case 0x1A19: return "Enter BASIC";
+    case 0x1C90: return "Compare HL and DE";
+    case 0x1C96: return "Examine String";
+    case 0x1D78: return "Check Next Character";
     case 0x28A7: return "String Output";
+    case 0x2EB8: return "Interrupt Handler";
     case 0x2EF4: return "Keyboard Scan";
     case 0x2EFD: return "Keyboard Scan Once";
+    case 0x308B: return "Character Output 2";
     case 0x3450: return "Beep";
     case 0x345C: return "Sound Output";
     case 0x3AE2: return "Print CRLF";
     }
-    return 0;
+    return NULL;
+}
+
+/* Gets a BASIC token name from an address */
+static const char *get_token_from_address(unsigned address)
+{
+    int token;
+    if (token_handler[0] == 0) {
+        return NULL;
+    }
+    for (token = 128; token < 256; ++token) {
+        if (address == token_handler[token - 128]) {
+            return basic_token_names[token - 128];
+        }
+    }
+    return NULL;
 }
 
 /* Disassemble a block of Z80 instructions */
@@ -515,7 +550,21 @@ static void disassemble(FILE *out, unsigned address, const unsigned char *data, 
     const char *insn;
     size_t size, index;
     size_t opcode_size;
+    const char *name;
+    int prev_was_jump = 0;
     while (len > 0) {
+        name = map_rom_routine(address);
+        if (!name) {
+            name = get_token_from_address(address);
+        }
+        if (name) {
+            printf(";\n");
+            printf("; %s\n", name);
+            printf(";\n");
+        } else if (prev_was_jump) {
+            printf(";\n");
+        }
+        prev_was_jump = 0;
         fprintf(out, "%04X:", address);
         insn = get_insn_info(data, &opcode_size, &size);
         for (index = 0; index < size; ++index) {
@@ -526,9 +575,13 @@ static void disassemble(FILE *out, unsigned address, const unsigned char *data, 
             ++index;
         }
         fprintf(out, "     ");
-        if (data[0] == 0xCD && data[2] < 0x40) {
+        if ((data[0] == 0xCD || data[0] == 0xC3) && data[2] < 0x40) {
             /* Probably a call into a ROM routine.  Is it one we recognize? */
-            const char *name = map_rom_routine(data[1] + (((unsigned)(data[2])) << 8));
+            unsigned dest = data[1] + (((unsigned)(data[2])) << 8);
+            name = map_rom_routine(dest);
+            if (!name) {
+                name = get_token_from_address(dest);
+            }
             dump_instruction(out, address + size, insn, data + opcode_size);
             if (name) {
                 fprintf(out, "            ; %s", name);
@@ -538,6 +591,10 @@ static void disassemble(FILE *out, unsigned address, const unsigned char *data, 
         } else {
             fprintf(out, "DB   $%02X", data[0]);
         }
+        if (data[0] == 0x18 || data[0] == 0xC3 || data[0] == 0xC9 || data[0] == 0xE9) {
+            /* Unconditional jump instruction: "JR", "JP", "RET", or "JP (HL)" */
+            prev_was_jump = 1;
+        }
         fprintf(out, "\n");
         if (size >= len) {
             break;
@@ -546,6 +603,23 @@ static void disassemble(FILE *out, unsigned address, const unsigned char *data, 
         len -= size;
         data += size;
     }
+}
+
+/* Loads the addresses of the BASIC token handling routines */
+static void load_basic_tokens_inner(unsigned address, int first, int last, const unsigned char *data)
+{
+    int token;
+    const unsigned char *d;
+    for (token = first; token <= last; ++token) {
+        d = data + address + (token - first) * 2;
+        token_handler[token - 128] = d[0] + (((unsigned)(d[1])) << 8);
+    }
+}
+static void load_basic_tokens(const unsigned char *data)
+{
+    /* Load the token handlers from the two routine pointer tables */
+    load_basic_tokens_inner(0x1822, 128, 187, data);
+    load_basic_tokens_inner(0x1608, 215, 250, data);
 }
 
 /* Lists the contents of a BASIC program */

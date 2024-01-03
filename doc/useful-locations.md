@@ -87,6 +87,7 @@ memory expansion / cartridge port, with the driver in external ROM.
 * `$7809 - $780B` - Handler for `RST $20`, usually a `JP` or `RET` instruction.
 * `$780C - $780E` - Handler for `RST $28`, usually a `JP` or `RET` instruction.
 * `$780F - $7811` - Handler for `RST $30`, usually a `JP` or `RET` instruction.
+* `$7820 - $7821` - Address of the cursor position between `$7000` and `$71FF`.
 * `$783B` - Copy of the output latch; the last value that was written to
   `$6800` in I/O space.
 * `$787D - $787F` - Interrupt handler.
@@ -95,7 +96,6 @@ memory expansion / cartridge port, with the driver in external ROM.
 * `$78A0, $78A1` - 16-bit address of the end of BASIC's stack and the
   start of the string variable storage area.
 * `$78A4, $78A5` - 16-bit address of the start of the BASIC program.
-* `$78A6` - Cursor position.
 * `$78B1, $78B2` - 16-bit address of the top of memory.
 * `$78F9, $78FA` - 16-bit address of the end of the BASIC program and the
   start of the simple variables table.
@@ -107,10 +107,23 @@ memory expansion / cartridge port, with the driver in external ROM.
 
 ## Useful subroutines in ROM
 
+### 0000 - Reset Vector
+
+Control jumps to here upon CPU reset.
+
+### 0008 - RST $08
+
+Handler for `RST $08`; jumps to the address `$7800`.  By default this
+jumps to the "Examine String" routine at `$1C96`.
+
 ### 0049 - Keyboard Get
 
 Waits for a character on the keyboard and returns it in A.
 Destroys F, BC, DE, and HL.
+
+### 0050 - Screen Get Character
+
+Gets the character under the cursor on the screen into A.  Destroys HL.
 
 ### 01C9 - Clear Screen
 
@@ -134,15 +147,62 @@ Carry will be set if BREAK has been pressed.
 Returns the printer status byte in A.  If bit 0 is set, the printer is busy.
 If bit 0 is not set, the printer is ready.  BC, DE, and HL are preserved.
 
+### 06A0 - Enable Interrupts and Enter BASIC
+
+Enables interrupts and then jumps to the routine at `$1A19`.
+
 ### 1A19 - BASIC Entry Point
 
 Entry point to the BASIC interpreter.  ROM cartridges can jump to this
 location to re-enter BASIC when the cartridge program exits.
 
+### 1C90 - Compare HL and DE
+
+Compares HL and DE and sets the C and Z flags appropriately.
+HL is destroyed.
+
+Normally this routine is accessed via `RST $18`.
+
+### 1C96 - Examine String
+
+Compares the byte at the address in HL with the value in the calling
+function.  If the bytes are the same, HL is incremented and control
+returns.  If the bytes differ, then jumps into BASIC with a
+"SYNTAX ERROR".
+
+Normally this routine is accessed via `RST $08`.  The following example
+checks if the string at HL is "ABC":
+
+    RST $08
+    DB  $41
+    RST $08
+    DB  $42
+    RST $08
+    DB  $43
+
+### 1D78 - Check Next Character
+
+Fetches the character at HL and clears the carry bit if it is
+alphabetic, or sets the carry bit if not.  Whitespace is
+skipped automatically.
+
+Normally this routine is accessed via `RST $10`.  However, if DOS
+is running then issuing `RST $10` will instead call into DOS.
+
 ### 28A7 - String Output
 
 Writes the NUL-terminated string that is pointed to by HL to the screen.
 Destroys AF, BC, DE, and HL.
+
+### 2EB8 - Interrupt Handler
+
+Handles interrupts to the CPU on the "INT" line.  Calls the
+user-supplied handler at `$787D` and then performs some internal
+housekeeping.
+
+Because the "INT" line is hooked up to the frame sync signal of the
+MC6847 Video Display Generator (VDG), the interrupt will fire off at
+50Hz on PAL systems when interrupts are enabled in the CPU.
 
 ### 2EF4 - Keyboard Scan
 
@@ -152,6 +212,12 @@ Or zero if no key is pressed.  Destroys F, BC, DE, and HL.
 ### 2EFD - Keyboard Scan Once
 
 Another keyboard scanning routine.  No debouncing?  No echo?  TBD
+
+### 308B - Character Output 2
+
+Outputs the character in A to the screen.  All registers are destroyed.
+The routine at `$033A` should be used by user programs instead of this
+internal routine.
 
 ### 3450 - Beep
 

@@ -16,10 +16,10 @@ proceeds to do the following:
   This initialises the system vectors and other variables in RAM.
 * The copy is repeated 128 times, which has the effect of producing a
   delay at startup to allow the voltage rails to settle.
-* Set the bytes between `$7836` and `$785C` in RAM to zero.  More initialization.
-* ... TBD  $0075
+* Initialize global variables for the BASIC interpreter.
 * Clear the screen.
-* ... TBD  $00B5
+* Determine the amount of available RAM and populate the top of memory
+  pointer in `$78B1` and `$78B2`.
 * Print the startup banner message `VIDEO TECHNOLOGY BASIC V2.0`.
 * Check the four bytes at `$4000`, `$6000`, and `$8000` looking for the
   pattern `$AA`, `$55`, `$E7`, `$18`.  If that pattern is found, then there
