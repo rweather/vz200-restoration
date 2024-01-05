@@ -54,6 +54,129 @@ e.g. R906, C912, U904, etc.  For components without a known value, I listed
 the value as "???".  I was able to determine some of the values by inspecting
 the actual PCB.
 
+## Restoration
+
+### Initial condition of the unit
+
+There were no power or video cables.  The unit had not been powered on
+for a long time.  The power input is 9V DC with a standard DC barrel jack,
+so power can be easily supplied with a modern plugpack / wall wart.
+
+The outside of the case was dirty, but nothing that some water, Windex,
+and elbow grease wouldn't fix.  The plastic was a little yellowed.
+
+<img alt="Initial Condition Top" src="photos/initial-condition-top.jpg" width="860"/>
+
+<img alt="Initial Condition Bottom" src="photos/initial-condition-bottom.jpg" width="860"/>
+
+Serial number 075172.
+
+<img alt="Serial Number" src="photos/serial-number.png" width="860"/>
+
+The covers for the memory expansion and peripheral ports were still in place,
+so I was hopeful that it had never been opened.
+
+<img alt="Expansion Port Covers" src="photos/expansion-port-covers.jpg" width="860"/>
+
+However, once inside I discovered some dirt and the braids connecting the
+RF shield to ground had been cut:
+
+<img alt="Cut Braids" src="photos/cut-braids.jpg" width="860"/>
+
+It looks like someone had tried to remove the RF shield before and had
+not succeeded.  It is soldered down to the motherboard, but some of the
+legs were loose indicating partial success.
+
+### Checking rail-to-rail resistance
+
+I measured the resistance between 5V and ground - 284 ohms.  The same
+between 9V and ground.  Probably OK.  Not a dead short anyway.
+
+The resistance between 5V and 9V was 34 ohms, due to an actual 32 ohm
+resistor between the two:
+
+<img alt="Power Resistor" src="photos/power-resistor.png" width="860"/>
+
+### Removing the keyboard
+
+I had to remove the keyboard from the top half of the case to clean the
+case properly.  It looks like the original keyboard was in a module that
+was pushed in from the top and then snapped into place.  Removing the
+screws was easy, but I couldn't slide out the keyboard PCB without
+cutting the snaps or the cross-piece.  I elected to cut the cross-piece:
+
+<img alt="Keyboard Removal" src="photos/keyboard-removal.jpg" width="860"/>
+
+I'll figure out a replacement later.
+
+The keyboard PCB has scratched-on letters indicating which key is which.
+That's nice.
+
+<img alt="Keyboard Letters" src="photos/keyboard-letters.jpg" width="860"/>
+
+After that, it was easy to remove the rubber membrane for cleaning.
+The key caps themselves are molded into the membrane, so there are no
+individual keys to get lost.
+
+<img alt="Keyboard Membrane Before Cleaning" src="photos/keyboard-membrane-filthy.jpg" width="860"/>
+
+### Removing the RF shield
+
+The person who tried to remove the RF shield didn't do a very good job.
+Solder had bridged tracks, and one of the tracks was ripped right off the PCB:
+
+<img alt="Ripped Track" src="photos/ripped-track.jpg" width="860"/>
+
+Using a solder sucker, solder wick, flux, heat, and some patience,
+I managed to clean up the excess solder and get the shield off:
+
+<img alt="PCB Image" src="photos/pcb-image.jpg" width="860"/>
+
+Here a version with the major components marked up:
+
+<img alt="PCB Image With Markings" src="photos/pcb-marked-up.jpg" width="860"/>
+
+### Cleaning the case and keyboard membrane
+
+I cleaned the top and bottom of the case and the keyboard membrane
+with Windex and water.  Some stubborn stains on the back were cleaned
+off with isopropyl alchohol.
+
+<img alt="Top and Keyboard Membrane After Cleaning" src="photos/clean-case-top.jpg" width="860"/>
+
+<img alt="Bottom After Cleaning" src="photos/clean-case-bottom.jpg" width="860"/>
+
+### First power on test
+
+I connected a current-limited bench power supply set to 9V and 1A and
+gingerly turned it on.  The 7805 voltage regulator was putting out 4.925V
+and the system was consuming 650mA from the 9V supply.  So it looks like
+no dead shorts on the board.
+
+No blue smoke escaped, and the power LED turned on, so that's good.
+
+### Checking signals
+
+I checked the signals coming out of the CPU.  The clock on pin 6
+was sitting at 3.57797MHz - close enough to 3.58MHz - so that's good.
+
+The address lines all had reasonable looking activity, but about
+half of the data lines had weird-looking signals.  Resting half-way
+between 0V and 5V.
+
+### Video test
+
+Connecting up a Composite-to-HDMI video converter, I got garbage on
+the screen.  Repowering on and off gives me two different images:
+
+<img alt="Bad Screen 1" src="photos/bad-screen-1.jpg" width="860"/>
+
+<img alt="Bad Screen 2" src="photos/bad-screen-2.jpg" width="860"/>
+
+### TBD
+
+More to come ...
+
 ## Other documentation
 
 * [VZ200 startup sequence](doc/startup-sequence.md)
@@ -85,7 +208,14 @@ arrangement.
 * If you have FPGA skills, then consider replacing the MC6847 with an
 alternative that puts out standard RGB or HDMI video instead of
 composite video.
-* 100nF filter capacitors near each chip.  The original didn't have any!
+* The original schematic in the technical reference manual did not have
+100nF filter capacitors on the major chips.  The actual PCB does have a
+small number of 40nF capacitors and some electrolytics scattered around
+that were not listed in the original schematic.  I have captured most of
+them in my schematic.  Ensure that the voltage rails are properly filtered.
+* U13 is a 74LS04 hex inverter with a spare inverter gate, but the input
+was not tied to ground or 5V.  There is also a spare XOR gate in the
+16K memory expansion module whose inputs aren't tied high or low either.
 
 ## Acknowledgements
 
