@@ -6,8 +6,8 @@
 
   (title_block
     (title "VZ200 Computer")
-    (date "2024-01-01")
-    (rev "1")
+    (date "2024-01-05")
+    (rev "2")
   )
 
   (lib_symbols
@@ -2524,7 +2524,7 @@
   (symbol (lib_id "power:Earth") (at 207.01 132.08 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0255f7e5-cb3a-4705-973c-68d19ed0dccd)
-    (property "Reference" "#PWR072" (at 207.01 138.43 0)
+    (property "Reference" "#PWR090" (at 207.01 138.43 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "Earth" (at 207.01 135.89 0)
@@ -2539,9 +2539,6 @@
     (pin "1" (uuid c332c560-d53d-4f64-896b-5703f3ea9c5f))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "#PWR072") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "#PWR090") (unit 1)
         )
@@ -2552,7 +2549,7 @@
   (symbol (lib_id "power:+5V") (at 236.855 93.345 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 05848c77-426d-46be-b0fe-371a9568cb74)
-    (property "Reference" "#PWR073" (at 236.855 97.155 0)
+    (property "Reference" "#PWR091" (at 236.855 97.155 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 236.855 88.9 0)
@@ -2567,9 +2564,6 @@
     (pin "1" (uuid 1e402eb7-ef47-4611-bd96-dd4296235430))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "#PWR073") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "#PWR091") (unit 1)
         )
@@ -2580,7 +2574,7 @@
   (symbol (lib_id "Device:R") (at 195.58 99.695 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 08cbc27d-d0e0-40b1-a144-740bd5ee01c0)
-    (property "Reference" "R26" (at 197.485 98.425 0)
+    (property "Reference" "R922" (at 197.485 98.425 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1K5" (at 197.485 100.965 0)
@@ -2596,12 +2590,6 @@
     (pin "1" (uuid c0f73747-dfbe-4854-9d5a-a0abe84bdb69))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6"
-          (reference "R26") (unit 1)
-        )
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/6328ad0a-b5e9-48b1-85ea-8ba16c2316ca"
-          (reference "R905") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "R922") (unit 1)
         )
@@ -2642,9 +2630,6 @@
     (pin "3" (uuid 3391cb11-4fae-4d1e-aedf-40ffcaa81f34))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "U901") (unit 2)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "U901") (unit 2)
         )
@@ -2655,7 +2640,7 @@
   (symbol (lib_id "Device:R") (at 236.855 137.795 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 208c97dd-252a-4deb-8dd1-2b081d31f6b6)
-    (property "Reference" "R26" (at 238.76 136.525 0)
+    (property "Reference" "R925" (at 238.76 136.525 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "27R" (at 238.76 139.065 0)
@@ -2671,12 +2656,6 @@
     (pin "1" (uuid c152f153-7510-401a-b15c-7cf296f99d5f))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6"
-          (reference "R26") (unit 1)
-        )
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/6328ad0a-b5e9-48b1-85ea-8ba16c2316ca"
-          (reference "R905") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "R925") (unit 1)
         )
@@ -2687,7 +2666,7 @@
   (symbol (lib_id "power:+5V") (at 110.49 160.655 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 21001c1d-4466-4799-b9fb-547d1c3c261c)
-    (property "Reference" "#PWR073" (at 110.49 164.465 0)
+    (property "Reference" "#PWR079" (at 110.49 164.465 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 110.49 156.21 0)
@@ -2702,9 +2681,6 @@
     (pin "1" (uuid 6b523810-f495-48d0-adae-f9e99e6707df))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "#PWR073") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "#PWR079") (unit 1)
         )
@@ -2791,7 +2767,7 @@
   (symbol (lib_id "power:Earth") (at 64.77 186.055 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 27c2c0e3-a72c-4179-b1fc-88529428bee0)
-    (property "Reference" "#PWR072" (at 64.77 192.405 0)
+    (property "Reference" "#PWR076" (at 64.77 192.405 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "Earth" (at 64.77 189.865 0)
@@ -2806,9 +2782,6 @@
     (pin "1" (uuid 0ab44286-b2ea-4f8a-8770-29c1f2bc711f))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "#PWR072") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "#PWR076") (unit 1)
         )
@@ -2819,7 +2792,7 @@
   (symbol (lib_id "power:+5V") (at 88.265 160.655 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2a5beb2d-7c6b-4db4-8ff9-3d9de6ad6869)
-    (property "Reference" "#PWR073" (at 88.265 164.465 0)
+    (property "Reference" "#PWR077" (at 88.265 164.465 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 88.265 156.21 0)
@@ -2834,9 +2807,6 @@
     (pin "1" (uuid a2d51bec-a764-42a7-835b-edbaee4d1956))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "#PWR073") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "#PWR077") (unit 1)
         )
@@ -2847,7 +2817,7 @@
   (symbol (lib_id "power:+5V") (at 127 47.625 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2c0c447d-4c6f-499d-b458-dd6031b9396a)
-    (property "Reference" "#PWR073" (at 127 51.435 0)
+    (property "Reference" "#PWR084" (at 127 51.435 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 127 43.18 0)
@@ -2862,9 +2832,6 @@
     (pin "1" (uuid d03db61d-bd65-47f9-af90-130db27cf8ec))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "#PWR073") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "#PWR084") (unit 1)
         )
@@ -2875,7 +2842,7 @@
   (symbol (lib_id "power:Earth") (at 88.265 186.055 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2f0f8e07-6813-444c-bd01-3f76894a9491)
-    (property "Reference" "#PWR072" (at 88.265 192.405 0)
+    (property "Reference" "#PWR078" (at 88.265 192.405 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "Earth" (at 88.265 189.865 0)
@@ -2890,9 +2857,6 @@
     (pin "1" (uuid 45829a33-d94c-4712-9228-23c32c14e9d9))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "#PWR072") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "#PWR078") (unit 1)
         )
@@ -2903,7 +2867,7 @@
   (symbol (lib_id "Simulation_SPICE:NPN") (at 193.04 113.665 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3720d15c-ef5e-490e-9b4e-287a9c4910f7)
-    (property "Reference" "Q1" (at 198.755 112.395 0)
+    (property "Reference" "Q901" (at 198.755 112.395 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1402D" (at 198.755 114.935 0)
@@ -2929,9 +2893,6 @@
     (pin "3" (uuid c72230f0-b17f-4797-b8a9-a8ccd3a517d0))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/6328ad0a-b5e9-48b1-85ea-8ba16c2316ca"
-          (reference "Q1") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "Q901") (unit 1)
         )
@@ -3006,7 +2967,7 @@
   (symbol (lib_id "power:Earth") (at 110.49 186.055 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 50d1f97e-eb7b-4551-a14f-d69992bd9af0)
-    (property "Reference" "#PWR072" (at 110.49 192.405 0)
+    (property "Reference" "#PWR080" (at 110.49 192.405 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "Earth" (at 110.49 189.865 0)
@@ -3021,9 +2982,6 @@
     (pin "1" (uuid b79637d8-50d8-4068-a6a1-1bd00208eaf3))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "#PWR072") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "#PWR080") (unit 1)
         )
@@ -3034,7 +2992,7 @@
   (symbol (lib_id "power:+5V") (at 64.77 160.655 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 52e66cab-f353-4e85-b89c-f52454348035)
-    (property "Reference" "#PWR073" (at 64.77 164.465 0)
+    (property "Reference" "#PWR075" (at 64.77 164.465 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 64.77 156.21 0)
@@ -3049,9 +3007,6 @@
     (pin "1" (uuid d0857c49-65d0-494b-a2dd-248d0789f7c3))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "#PWR073") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "#PWR075") (unit 1)
         )
@@ -3062,7 +3017,7 @@
   (symbol (lib_id "Device:R") (at 163.195 142.24 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 55b7a156-654a-44e0-b263-8be90c09b2e4)
-    (property "Reference" "R16" (at 163.195 135.89 90)
+    (property "Reference" "R919" (at 163.195 135.89 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "68K" (at 163.195 138.43 90)
@@ -3078,12 +3033,6 @@
     (pin "1" (uuid 420d8192-d86a-4089-8fb4-fdd4cb6aaed7))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6"
-          (reference "R16") (unit 1)
-        )
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/6328ad0a-b5e9-48b1-85ea-8ba16c2316ca"
-          (reference "R901") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "R919") (unit 1)
         )
@@ -3094,7 +3043,7 @@
   (symbol (lib_id "Device:R") (at 187.96 93.345 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 57df6aa0-9b0b-4948-aaf1-8490a34d200b)
-    (property "Reference" "R16" (at 187.96 87.63 90)
+    (property "Reference" "R921" (at 187.96 87.63 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "82K" (at 187.96 90.17 90)
@@ -3110,12 +3059,6 @@
     (pin "1" (uuid f4d0776d-3b06-4d9e-9c5a-a2ac3f262dd8))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6"
-          (reference "R16") (unit 1)
-        )
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/6328ad0a-b5e9-48b1-85ea-8ba16c2316ca"
-          (reference "R901") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "R921") (unit 1)
         )
@@ -3126,7 +3069,7 @@
   (symbol (lib_id "power:Earth") (at 41.275 185.42 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5c40b2da-37b4-4ab8-9e1a-3b2b30e1b6df)
-    (property "Reference" "#PWR072" (at 41.275 191.77 0)
+    (property "Reference" "#PWR074" (at 41.275 191.77 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "Earth" (at 41.275 189.23 0)
@@ -3141,9 +3084,6 @@
     (pin "1" (uuid fd975ad6-d088-4854-8733-c872c63fe0be))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "#PWR072") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "#PWR074") (unit 1)
         )
@@ -3154,7 +3094,7 @@
   (symbol (lib_id "Device:R") (at 195.58 127.635 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 60336329-bc41-4d35-a163-97e8854fc348)
-    (property "Reference" "R26" (at 197.485 126.365 0)
+    (property "Reference" "R923" (at 197.485 126.365 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "330R" (at 197.485 128.905 0)
@@ -3170,12 +3110,6 @@
     (pin "1" (uuid 2c738eb8-363e-43ff-b530-234c108b4675))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6"
-          (reference "R26") (unit 1)
-        )
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/6328ad0a-b5e9-48b1-85ea-8ba16c2316ca"
-          (reference "R905") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "R923") (unit 1)
         )
@@ -3212,7 +3146,7 @@
   (symbol (lib_id "power:Earth") (at 127 66.675 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 68685799-82fd-43cb-a789-ed18439410b9)
-    (property "Reference" "#PWR072" (at 127 73.025 0)
+    (property "Reference" "#PWR085" (at 127 73.025 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "Earth" (at 127 70.485 0)
@@ -3227,9 +3161,6 @@
     (pin "1" (uuid bfc13fb9-c6d3-431b-b067-49c58c85df5c))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "#PWR072") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "#PWR085") (unit 1)
         )
@@ -3240,7 +3171,7 @@
   (symbol (lib_id "Simulation_SPICE:NPN") (at 234.315 106.68 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 696d5e22-192a-4bf2-9224-5b5b9ca9e1aa)
-    (property "Reference" "Q1" (at 240.03 105.41 0)
+    (property "Reference" "Q902" (at 240.03 105.41 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1402B" (at 240.03 107.95 0)
@@ -3266,9 +3197,6 @@
     (pin "3" (uuid 7ba7a010-1201-4fb3-9e80-28f3ab8fbcba))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/6328ad0a-b5e9-48b1-85ea-8ba16c2316ca"
-          (reference "Q1") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "Q902") (unit 1)
         )
@@ -3279,7 +3207,7 @@
   (symbol (lib_id "Device:R") (at 250.825 114.935 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6c5dcf01-e83e-4fe0-83c8-9e26bf9e9bde)
-    (property "Reference" "R16" (at 250.825 109.22 90)
+    (property "Reference" "R926" (at 250.825 109.22 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "56R" (at 250.825 111.76 90)
@@ -3295,12 +3223,6 @@
     (pin "1" (uuid 66b039bf-9809-4183-8215-648d0a217a20))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6"
-          (reference "R16") (unit 1)
-        )
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/6328ad0a-b5e9-48b1-85ea-8ba16c2316ca"
-          (reference "R901") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "R926") (unit 1)
         )
@@ -3385,7 +3307,7 @@
   (symbol (lib_id "power:Earth") (at 120.65 128.905 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7df37934-6634-4191-a34b-7c8d3842d3ef)
-    (property "Reference" "#PWR072" (at 120.65 135.255 0)
+    (property "Reference" "#PWR086" (at 120.65 135.255 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "Earth" (at 120.65 132.715 0)
@@ -3400,9 +3322,6 @@
     (pin "1" (uuid 84bce234-be9c-4ef7-a5d0-d5f6563ba3ed))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "#PWR072") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "#PWR086") (unit 1)
         )
@@ -3413,7 +3332,7 @@
   (symbol (lib_id "power:Earth") (at 132.715 186.055 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 81400540-3682-4057-b965-c046b47b2614)
-    (property "Reference" "#PWR072" (at 132.715 192.405 0)
+    (property "Reference" "#PWR082" (at 132.715 192.405 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "Earth" (at 132.715 189.865 0)
@@ -3428,9 +3347,6 @@
     (pin "1" (uuid 0dd333af-cb90-44e7-868a-c8ab8a57e2e4))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "#PWR072") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "#PWR082") (unit 1)
         )
@@ -3441,7 +3357,7 @@
   (symbol (lib_id "power:Earth") (at 31.115 29.845 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 842eb01a-768b-40fe-962d-3d3654950007)
-    (property "Reference" "#PWR074" (at 31.115 36.195 0)
+    (property "Reference" "#PWR072" (at 31.115 36.195 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "Earth" (at 31.115 33.655 0)
@@ -3456,9 +3372,6 @@
     (pin "1" (uuid 02e41e0d-9708-4afd-9189-4d2c202682a2))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "#PWR074") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "#PWR072") (unit 1)
         )
@@ -3539,7 +3452,7 @@
   (symbol (lib_id "power:Earth") (at 236.855 141.605 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 91a62504-a028-4e2b-8cc4-f8abfd62910f)
-    (property "Reference" "#PWR072" (at 236.855 147.955 0)
+    (property "Reference" "#PWR092" (at 236.855 147.955 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "Earth" (at 236.855 145.415 0)
@@ -3554,9 +3467,6 @@
     (pin "1" (uuid 1d64ec48-9dd5-411a-9960-915172799cb7))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "#PWR072") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "#PWR092") (unit 1)
         )
@@ -3567,7 +3477,7 @@
   (symbol (lib_id "power:+5V") (at 95.25 115.57 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 935c0afd-2335-4440-8479-90219119bac2)
-    (property "Reference" "#PWR073" (at 95.25 119.38 0)
+    (property "Reference" "#PWR083" (at 95.25 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 95.25 111.125 0)
@@ -3582,9 +3492,6 @@
     (pin "1" (uuid 237c444c-adfd-489b-a3f9-59fdafa40b63))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "#PWR073") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "#PWR083") (unit 1)
         )
@@ -3595,7 +3502,7 @@
   (symbol (lib_id "power:Earth") (at 266.065 120.015 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9566585d-c317-4332-bffa-739348a9b88d)
-    (property "Reference" "#PWR072" (at 266.065 126.365 0)
+    (property "Reference" "#PWR093" (at 266.065 126.365 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "Earth" (at 266.065 123.825 0)
@@ -3610,9 +3517,6 @@
     (pin "1" (uuid cfcb03fb-9c11-4b28-9cf3-f4276e6bdab2))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "#PWR072") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "#PWR093") (unit 1)
         )
@@ -3797,9 +3701,6 @@
     (pin "3" (uuid a82caef5-c6ae-4476-8ee4-b692c35f7748))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "U901") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "U901") (unit 1)
         )
@@ -3825,9 +3726,6 @@
     (pin "1" (uuid 51da9875-89f9-4dcf-9a5f-fe3ae9532572))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "#PWR073") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "#PWR073") (unit 1)
         )
@@ -3902,7 +3800,7 @@
   (symbol (lib_id "power:Earth") (at 154.94 186.055 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a8083aa9-9162-4d69-906f-227a54b64c5d)
-    (property "Reference" "#PWR072" (at 154.94 192.405 0)
+    (property "Reference" "#PWR087" (at 154.94 192.405 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "Earth" (at 154.94 189.865 0)
@@ -3917,9 +3815,6 @@
     (pin "1" (uuid ed07e229-0a18-4fef-a220-d5f830841746))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "#PWR072") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "#PWR087") (unit 1)
         )
@@ -3930,7 +3825,7 @@
   (symbol (lib_id "Device:R") (at 236.855 122.555 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a8924b33-1d5d-44bb-b884-a2f417773696)
-    (property "Reference" "R26" (at 238.76 121.285 0)
+    (property "Reference" "R924" (at 238.76 121.285 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "47R" (at 238.76 123.825 0)
@@ -3946,12 +3841,6 @@
     (pin "1" (uuid e2387968-d6a7-4ecc-bfa0-7da59b48cd7d))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6"
-          (reference "R26") (unit 1)
-        )
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/6328ad0a-b5e9-48b1-85ea-8ba16c2316ca"
-          (reference "R905") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "R924") (unit 1)
         )
@@ -4002,7 +3891,7 @@
   (symbol (lib_id "power:+5V") (at 132.715 160.655 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a9a92104-f410-42f5-bf51-df1f335d38cb)
-    (property "Reference" "#PWR073" (at 132.715 164.465 0)
+    (property "Reference" "#PWR081" (at 132.715 164.465 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 132.715 156.21 0)
@@ -4017,9 +3906,6 @@
     (pin "1" (uuid 6b0ec0c5-13c6-49eb-b469-2d12fd9b0fae))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "#PWR073") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "#PWR081") (unit 1)
         )
@@ -4266,9 +4152,6 @@
     (pin "3" (uuid 3391cb11-4fae-4d1e-aedf-40ffcaa81f33))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "U901") (unit 3)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "U901") (unit 3)
         )
@@ -4317,7 +4200,7 @@
   (symbol (lib_id "power:Earth") (at 195.58 131.445 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid cb2c555f-09c2-43ed-a2cb-cd898378d1db)
-    (property "Reference" "#PWR072" (at 195.58 137.795 0)
+    (property "Reference" "#PWR089" (at 195.58 137.795 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "Earth" (at 195.58 135.255 0)
@@ -4332,9 +4215,6 @@
     (pin "1" (uuid 6d3c6295-c8b7-4bb5-9c45-499396de05cc))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "#PWR072") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "#PWR089") (unit 1)
         )
@@ -4345,7 +4225,7 @@
   (symbol (lib_id "power:+5V") (at 154.94 160.655 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid cdeb28bf-3778-4aa8-a364-a455f9df11bf)
-    (property "Reference" "#PWR073" (at 154.94 164.465 0)
+    (property "Reference" "#PWR088" (at 154.94 164.465 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 154.94 156.21 0)
@@ -4360,9 +4240,6 @@
     (pin "1" (uuid b8c922f7-a6b3-46b6-a5bf-8cc1a1ab8748))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
-          (reference "#PWR073") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "#PWR088") (unit 1)
         )
@@ -4475,7 +4352,7 @@
   (symbol (lib_id "Device:R") (at 173.99 113.665 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fdfc6e9c-5b34-49c2-8578-a602144e5cdd)
-    (property "Reference" "R16" (at 173.99 107.95 90)
+    (property "Reference" "R920" (at 173.99 107.95 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "3K9" (at 173.99 110.49 90)
@@ -4491,12 +4368,6 @@
     (pin "1" (uuid a0542c5c-418d-4b1d-91da-5a274897dcc4))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6"
-          (reference "R16") (unit 1)
-        )
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/6328ad0a-b5e9-48b1-85ea-8ba16c2316ca"
-          (reference "R901") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/411917b7-fcaf-4dab-9115-83bef36e1958"
           (reference "R920") (unit 1)
         )

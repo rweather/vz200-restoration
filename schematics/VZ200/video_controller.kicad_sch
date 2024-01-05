@@ -6,8 +6,8 @@
 
   (title_block
     (title "VZ200 Computer")
-    (date "2024-01-01")
-    (rev "1")
+    (date "2024-01-05")
+    (rev "2")
   )
 
   (lib_symbols
@@ -2160,7 +2160,7 @@
   (symbol (lib_id "Device:R") (at 85.09 64.135 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0c362581-0e4a-4a9b-acb8-23fae3223ee3)
-    (property "Reference" "R26" (at 79.375 62.865 90)
+    (property "Reference" "R910" (at 79.375 62.865 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "6K8" (at 90.17 62.865 90)
@@ -2176,12 +2176,6 @@
     (pin "1" (uuid 8806d882-ea1e-4e2f-8c39-5e42e6a55808))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6"
-          (reference "R26") (unit 1)
-        )
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/6328ad0a-b5e9-48b1-85ea-8ba16c2316ca"
-          (reference "R13") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
           (reference "R910") (unit 1)
         )
@@ -2192,7 +2186,7 @@
   (symbol (lib_id "Device:R") (at 85.09 76.835 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0cd6bba9-1573-4695-9e81-bbd1e36a263b)
-    (property "Reference" "R26" (at 79.375 75.565 90)
+    (property "Reference" "R915" (at 79.375 75.565 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "6K8" (at 90.17 75.565 90)
@@ -2208,12 +2202,6 @@
     (pin "1" (uuid 45edf52b-4d01-455b-a003-2a280fad6252))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6"
-          (reference "R26") (unit 1)
-        )
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/6328ad0a-b5e9-48b1-85ea-8ba16c2316ca"
-          (reference "R13") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
           (reference "R915") (unit 1)
         )
@@ -2224,7 +2212,7 @@
   (symbol (lib_id "Device:R") (at 85.09 79.375 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0e59c0d1-89f2-4d57-8aa7-64bf69695ea2)
-    (property "Reference" "R26" (at 79.375 78.105 90)
+    (property "Reference" "R916" (at 79.375 78.105 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "6K8" (at 90.17 78.105 90)
@@ -2240,12 +2228,6 @@
     (pin "1" (uuid 240c77b8-7e89-4a80-a114-45142fa816ed))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6"
-          (reference "R26") (unit 1)
-        )
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/6328ad0a-b5e9-48b1-85ea-8ba16c2316ca"
-          (reference "R13") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
           (reference "R916") (unit 1)
         )
@@ -2304,7 +2286,7 @@
   (symbol (lib_id "Device:R") (at 85.09 66.675 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 12398c67-4fa7-430e-a5ea-f9783ae60dea)
-    (property "Reference" "R26" (at 79.375 65.405 90)
+    (property "Reference" "R911" (at 79.375 65.405 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "6K8" (at 90.17 65.405 90)
@@ -2320,12 +2302,6 @@
     (pin "1" (uuid a41f2500-9442-4d84-9891-03c46cd99c61))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6"
-          (reference "R26") (unit 1)
-        )
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/6328ad0a-b5e9-48b1-85ea-8ba16c2316ca"
-          (reference "R13") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
           (reference "R911") (unit 1)
         )
@@ -2336,7 +2312,7 @@
   (symbol (lib_id "Device:R") (at 85.09 69.215 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1d339bbf-42f8-4d29-bce2-874c67e82c53)
-    (property "Reference" "R26" (at 79.375 67.945 90)
+    (property "Reference" "R912" (at 79.375 67.945 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "6K8" (at 90.17 67.945 90)
@@ -2352,12 +2328,6 @@
     (pin "1" (uuid f9904626-913e-49c3-a720-de3c0c1eea51))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6"
-          (reference "R26") (unit 1)
-        )
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/6328ad0a-b5e9-48b1-85ea-8ba16c2316ca"
-          (reference "R13") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
           (reference "R912") (unit 1)
         )
@@ -2368,7 +2338,7 @@
   (symbol (lib_id "Device:R") (at 85.09 84.455 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 27463646-2ea5-4e1a-b10e-31a82922f932)
-    (property "Reference" "R26" (at 79.375 83.185 90)
+    (property "Reference" "R918" (at 79.375 83.185 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "6K8" (at 90.17 83.185 90)
@@ -2384,12 +2354,6 @@
     (pin "1" (uuid 3bf00f1d-e388-4df8-9b31-0899a0c33f6e))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6"
-          (reference "R26") (unit 1)
-        )
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/6328ad0a-b5e9-48b1-85ea-8ba16c2316ca"
-          (reference "R13") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
           (reference "R918") (unit 1)
         )
@@ -2400,7 +2364,7 @@
   (symbol (lib_id "Device:R") (at 85.09 81.915 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 334d67a2-6806-45ba-864d-1e28685ce104)
-    (property "Reference" "R26" (at 79.375 80.645 90)
+    (property "Reference" "R917" (at 79.375 80.645 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "6K8" (at 90.17 80.645 90)
@@ -2416,12 +2380,6 @@
     (pin "1" (uuid 2309ad62-564f-44fe-b100-0b2fb7198a45))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6"
-          (reference "R26") (unit 1)
-        )
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/6328ad0a-b5e9-48b1-85ea-8ba16c2316ca"
-          (reference "R13") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
           (reference "R917") (unit 1)
         )
@@ -2507,7 +2465,7 @@
   (symbol (lib_id "Device:R") (at 85.09 61.595 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 627f9855-d29e-4758-82e6-e9277a383c51)
-    (property "Reference" "R26" (at 79.375 60.325 90)
+    (property "Reference" "R909" (at 79.375 60.325 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "6K8" (at 90.17 60.325 90)
@@ -2523,12 +2481,6 @@
     (pin "1" (uuid a3d2ccab-ba56-41c2-80bf-d3cb9879646a))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6"
-          (reference "R26") (unit 1)
-        )
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/6328ad0a-b5e9-48b1-85ea-8ba16c2316ca"
-          (reference "R13") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
           (reference "R909") (unit 1)
         )
@@ -2564,7 +2516,7 @@
   (symbol (lib_id "Device:R") (at 85.09 71.755 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7fa298ba-119c-4c8f-805d-29db48299b4a)
-    (property "Reference" "R26" (at 79.375 70.485 90)
+    (property "Reference" "R913" (at 79.375 70.485 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "6K8" (at 90.17 70.485 90)
@@ -2580,12 +2532,6 @@
     (pin "1" (uuid ce2f03ed-6b3d-4f02-a378-dbe776b1708d))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6"
-          (reference "R26") (unit 1)
-        )
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/6328ad0a-b5e9-48b1-85ea-8ba16c2316ca"
-          (reference "R13") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
           (reference "R913") (unit 1)
         )
@@ -2621,7 +2567,7 @@
   (symbol (lib_id "Device:R") (at 85.09 74.295 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 87f0e854-fbb2-4f04-9532-fba9a5e3d9db)
-    (property "Reference" "R26" (at 79.375 73.025 90)
+    (property "Reference" "R914" (at 79.375 73.025 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "6K8" (at 90.17 73.025 90)
@@ -2637,12 +2583,6 @@
     (pin "1" (uuid 5ccd052a-7ba8-40b3-ad82-6c38a5536f1b))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6"
-          (reference "R26") (unit 1)
-        )
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/6328ad0a-b5e9-48b1-85ea-8ba16c2316ca"
-          (reference "R13") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
           (reference "R914") (unit 1)
         )
@@ -2717,7 +2657,7 @@
   (symbol (lib_id "Device:R") (at 85.09 59.055 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid dc16a2f9-0453-400a-9dd9-134cbfbf5bec)
-    (property "Reference" "R26" (at 79.375 57.785 90)
+    (property "Reference" "R908" (at 79.375 57.785 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "6K8" (at 90.17 57.785 90)
@@ -2733,12 +2673,6 @@
     (pin "1" (uuid 62ef7163-22bc-496d-b98e-2ebbfb0da4d3))
     (instances
       (project "VZ200"
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6"
-          (reference "R26") (unit 1)
-        )
-        (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/6328ad0a-b5e9-48b1-85ea-8ba16c2316ca"
-          (reference "R13") (unit 1)
-        )
         (path "/5e5f5998-714c-4695-b6b0-5b20d6c62fd6/3da1966a-3153-43ad-8bb8-b6c6ea05c132"
           (reference "R908") (unit 1)
         )
