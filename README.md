@@ -219,12 +219,12 @@ This was good for me.  I removed the ROM's and the bodge wires, and then
 re-bodged the PCB back to the 28-pin footprint for the two AT28C64B-15PU
 EEPROM's that I purchased from Mouser.  The following table shows the pin
 mapping between the 24-pin and 28-pin footprints, with the major changes
-shown in yellow:
+shown in bold:
 
 <table border="1">
 <tr><td><b>2364 Pin</b></td><td><b>Connection</b></td><td><b>AT28C64 Pin</b></td><td><b>Connection</b></td></tr>
-<tr bgcolor="yellow"><td> </td><td> </td><td>1</td><td>5V</td></tr>
-<tr bgcolor="yellow"><td> </td><td> </td><td>2</td><td>A12</td></tr>
+<tr><td> </td><td> </td><td><b>1</b></td><td><b>5V</b></td></tr>
+<tr><td> </td><td> </td><td><b>2</b></td><td><b>A12</b></td></tr>
 <tr><td>1</td><td>A7</td><td>3</td><td>A7</td></tr>
 <tr><td>2</td><td>A6</td><td>4</td><td>A6</td></tr>
 <tr><td>3</td><td>A5</td><td>5</td><td>A5</td></tr>
@@ -242,15 +242,15 @@ shown in yellow:
 <tr><td>15</td><td>D5</td><td>17</td><td>D5</td></tr>
 <tr><td>16</td><td>D6</td><td>18</td><td>D6</td></tr>
 <tr><td>17</td><td>D7</td><td>19</td><td>D7</td></tr>
-<tr bgcolor="yellow"><td>18</td><td>A11</td><td>20</td><td>CE</td></tr>
+<tr><td><b>18</b></td><td><b>A11</b></td><td><b>20</b></td><td><b>CE</b></td></tr>
 <tr><td>19</td><td>A10</td><td>21</td><td>A10</td></tr>
-<tr bgcolor="yellow"><td>20</td><td>CE</td><td>22</td><td>RD</td></tr>
-<tr bgcolor="yellow"><td>21</td><td>A12</td><td>23</td><td>A11</td></tr>
+<tr><td><b>20</b></td><td><b>CE</b></td><td><b>22</b></td><td><b>RD</b></td></tr>
+<tr><td><b>21</b></td><td><b>A12</b></td><td><b>23</b></td><td><b>A11</b></td></tr>
 <tr><td>22</td><td>A9</td><td>24</td><td>A9</td></tr>
 <tr><td>23</td><td>A8</td><td>25</td><td>A8</td></tr>
 <tr><td>24</td><td>5V</td><td>26</td><td>5V</td></tr>
-<tr bgcolor="yellow"><td> </td><td> </td><td>27</td><td>5V</td></tr>
-<tr bgcolor="yellow"><td> </td><td> </td><td>28</td><td>5V</td></tr>
+<tr><td> </td><td> </td><td><b>27</b></td><td><b>5V</b></td></tr>
+<tr><td> </td><td> </td><td><b>28</b></td><td><b>5V</b></td></tr>
 </table>
 
 <b>Note:</b> The chip enable "CE" pins for the two ROM's are connected
@@ -267,7 +267,7 @@ And here are the bodge wires I added on the back of the PCB:
 <img alt="Replacement ROM's Bottom" src="photos/replacement-roms-bottom.jpg" width="860"/>
 
 During the ROM removal processm, I ripped up a few of the tracks so I have a
-few more bodge wires than would be strictly necessary for the yellow
+few more bodge wires than would be strictly necessary for the bold
 alterations listed above.  Not my finest soldering job, but servicable.
 
 The ROM images are available from Bushy's website.  Download the
