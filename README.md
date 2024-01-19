@@ -326,6 +326,20 @@ After connecting the keyboard, I tried writing a little BASIC program:
 All of the keys work reliably except CTRL.  Sometimes it works, but not always.
 May be an alignment issue or something wrong with the membrane under the key.
 
+### Fixing the CTRL key
+
+I disassembled the keyboard again and carefully scrubbed the contacts on the
+PCB and the membrane itself with dry cotton buds.  There was still a little
+dirt in the membrane and on the contacts.
+
+Previously I tightened the keyboard screws quite tight when I reassembled
+the keyboard.  One theory I had was that the membrane didn't have enough
+"play" because it was too tight / stretched around the CTRL key.
+When I reassembled the keyboard I screwed in the screws until they
+stopped moving.  But I didn't tighten any further than that.
+
+Whether it was the cleaning or the untightened screws, the CTRL key now works.
+
 ### Conclusion
 
 Here is a summary of the changes that I made:
