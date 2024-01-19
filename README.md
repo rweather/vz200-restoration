@@ -266,7 +266,7 @@ And here are the bodge wires I added on the back of the PCB:
 
 <img alt="Replacement ROM's Bottom" src="photos/replacement-roms-bottom.jpg" width="860"/>
 
-During the ROM removal processm, I ripped up a few of the tracks so I have a
+During the ROM removal process, I ripped up a few of the tracks so I have a
 few more bodge wires than would be strictly necessary for the bold
 alterations listed above.  Not my finest soldering job, but servicable.
 
@@ -450,6 +450,14 @@ beloved Cat - it is a similar vintage.
 If anyone has a Dick Smith Cat or a Laser 3000, working or not, and are
 willing to part with it, then please contact me via
 [email](mailto:rhys.weatherley@gmail.com).
+
+I am also looking for the following to complete my set of early 1980's
+Australian computers:
+
+* Dick Smith System 80 (TRS-80 clone)
+* Dick Smith Super 80 (this was a kit made in concert with Electronics Australia)
+* Microbee
+* Any odd Electronics Australia or ETI kit computers like DREAM-6800, ETI-660, or EDUC-8
 
 ## License
 
