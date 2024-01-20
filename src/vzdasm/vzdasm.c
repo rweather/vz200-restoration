@@ -626,12 +626,26 @@ static void load_basic_tokens(const unsigned char *data)
 static void list_basic(FILE *out, const unsigned char *data, size_t len)
 {
     unsigned line;
+    unsigned next_address = 0;
     unsigned char ch;
     int quoted;
     int last_was_token;
     int first_token;
     while (len >= 4) {
-        /* Skip the address of the next line and print the line number */
+        /* If the address of the next line is zero, then we're at the end
+         * of the BASIC program.  There may be machine code following. */
+        if (data[0] == 0 && data[1] == 0) {
+            data += 2;
+            len -= 2;
+            if (len > 0) {
+                printf(";\n");
+                disassemble(out, next_address + 2, data, len);
+            }
+            break;
+        }
+        next_address = data[0] + (((unsigned)(data[1])) << 8);
+
+        /* Print the line number */
         line = data[2] + (((unsigned)(data[3])) << 8);
         fprintf(out, "%d ", line);
         data += 4;
