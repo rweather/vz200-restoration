@@ -365,12 +365,14 @@ And here it is in all of its restored glory:
 
 ## Schematics
 
-I have reproduced the schematics from the VZ200 Technical Reference Manual in
-KiCad and generated PDF versions.  The original schematics can be hard to read.
+I have reproduced the schematics from the VZ200 and VZ300 Technical
+Reference Manuals in KiCad and generated PDF versions.  The original
+schematics can be hard to read.
 
 * [VZ200 Motherboard](schematics/VZ200/PDF/VZ200.pdf)
 * [Printer Interface](schematics/VZ200_Printer_Interface/PDF/VZ200_Printer_Interface.pdf)
 * [16K Memory Expansion Module](schematics/VZ200_16K_RAM_Expansion/PDF/VZ200_16K_RAM_Expansion.pdf)
+* [Joystick Interface](schematics/VZ200_Joystick_Interface/PDF/VZ200_Joystick_Interface.pdf)
 
 Note: The motherboard schematic includes components for the PAL encoder
 and 6K of Program RAM that were on separate PCB's in the original design.
