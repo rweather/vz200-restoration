@@ -25,6 +25,36 @@ user program RAM on-board and a mechanical keyboard.
 Outside of Australia and New Zealand, the VZ200 and VZ300 were known as the
 Laser 200 and Laser 310 respectively.
 
+## Updates
+
+Since doing the original restoration, I was gifted some more VZ200/VZ300
+gear from a friend at work, Brian.  Brian got these years ago from an old
+fellow in the local amateur radio network who was obviously a big fan of the
+VZ computers, but was getting too old to work on them.
+
+Many of the pieces have custom modifications and may or may not work.
+Brian had 2 or 3 of everything.  He gave me these and kept the rest:
+
+* Set of joysticks (working, just needed a clean).
+* Printer interface.
+* 16K memory expansion module that has been modified to 32K.
+* Data casette recorder.
+* Floppy disk controller and floppy disk drive.  Plus some floppy disks.
+* Serial port kit.
+* VZ300 - not working.
+* VZ300 in a VZ200 case - also not working.
+
+The VZ300 in a VZ200 case is the result of a motherboard swap.  Brian still
+has the (working) companion VZ200 in a VZ300 case.  It looks like the original
+owner wanted a VZ200 with a proper mechanical keyboard.  So he made one!
+
+Brian also gifted me a Microbee kit (assembled), two TRS-80 color computers,
+and a TRS-80 printer.
+
+I will gradually work on restoring these and post the results as I go.
+
+And now onto the original restoration ...
+
 ## Restoration
 
 Note: All images below have been scaled down.  Use "Open Image in New Tab"
@@ -474,6 +504,9 @@ Australian computers:
 * Dick Smith Super 80 (this was a kit made in concert with Electronics Australia)
 * Microbee
 * Any odd Electronics Australia or ETI kit computers like DREAM-6800, ETI-660, or EDUC-8
+
+Update: I now have the original kit version of the Microbee but am still
+on the lookout for the production Microbee.
 
 ## License
 
