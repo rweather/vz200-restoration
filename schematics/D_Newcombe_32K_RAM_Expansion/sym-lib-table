@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "HM6264")(type "KiCad")(uri "${KIPRJMOD}/HM6264.kicad_sym")(options "")(descr ""))
+)

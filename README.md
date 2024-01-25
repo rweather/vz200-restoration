@@ -37,12 +37,14 @@ Brian had 2 or 3 of everything.  He gave me these and kept the rest:
 
 * Set of joysticks (working, just needed a clean).
 * Printer interface.
-* 16K memory expansion module that has been modified to 32K.
+* [16K memory expansion module that has been modified to 32K](Memory_Expansion_32K.md)
 * Data casette recorder.
 * Floppy disk controller and floppy disk drive.  Plus some floppy disks.
 * Serial port kit.
 * VZ300 - not working.
 * VZ300 in a VZ200 case - also not working.
+
+The links point at information about the restoration on each item.
 
 The VZ300 in a VZ200 case is the result of a motherboard swap.  Brian still
 has the (working) companion VZ200 in a VZ300 case.  It looks like the original
