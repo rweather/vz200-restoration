@@ -320,6 +320,7 @@ static unsigned char const header_rom0[] = {0xF3, 0xAF, 0x32, 0x00, 0x68};
 static unsigned char const header_rom1[] = {0x2d, 0x38, 0x02, 0x1E};
 static unsigned char const header_vzfile1[] = {0x56, 0x5a, 0x46, 0x30};
 static unsigned char const header_vzfile2[] = {0x20, 0x20, 0x00, 0x00};
+static unsigned char const header_vzfile3[] = {0x56, 0x5a, 0x46, 0x4f};
 
 static void disassemble(FILE *out, unsigned address, const unsigned char *data, size_t len);
 static void load_basic_tokens(const unsigned char *data);
@@ -375,7 +376,8 @@ int main(int argc, char *argv[])
         address = 0x2000;
         disassemble(stdout, address, data, data_len);
     } else if ((is_magic(header_vzfile1, sizeof(header_vzfile1)) ||
-                is_magic(header_vzfile2, sizeof(header_vzfile2))) && data_len > 24) {
+                is_magic(header_vzfile2, sizeof(header_vzfile2)) ||
+                is_magic(header_vzfile3, sizeof(header_vzfile3))) && data_len > 24) {
         /* Looks like a ".VZ" file, which is either a BASIC program
          * or an encapsulated machine code program. */
         address = data[22] + (((unsigned)(data[23])) << 8);
