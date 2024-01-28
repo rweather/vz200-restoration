@@ -121,7 +121,7 @@ static void write_program_name(FILE *out, const char *filename)
         --len;
     }
     while (count > 0 && filename[len] != '.' && filename[len] != '\0') {
-        char ch = filename[len++];
+        int ch = (filename[len++] & 0xFF);
         if (ch >= 0x60 && ch <= 0x7F) {
             /* Convert the program name to upper case */
             ch -= 0x20;
@@ -171,6 +171,16 @@ static unsigned write_tokens
     return next_address;
 }
 
+static int to_hex(char ch)
+{
+    if (ch >= 'A' && ch <= 'F')
+        return ch - 'A' + 10;
+    else if (ch >= 'a' && ch <= 'f')
+        return ch - 'a' + 10;
+    else
+        return ch - '0';
+}
+
 static unsigned tokenize_line
     (FILE *out, const char *filename, unsigned input_line,
      unsigned address, char *line)
@@ -181,7 +191,7 @@ static unsigned tokenize_line
     unsigned long linenum;
     unsigned char tokens[BUFSIZ];
     char *endptr;
-    char ch, quote;
+    int ch, quote;
     int rem;
 
     /* Strip whitespace from the start of the line */
@@ -237,12 +247,19 @@ static unsigned tokenize_line
     quote = 0;
     rem = 0;
     while ((ch = *line) != '\0') {
+        ch &= 0xFF;
         if (rem) {
             /* We are inside a "REM" statement */
             tokens[len++] = ch;
             ++line;
         } else if (quote) {
             /* We are inside a quoted string */
+            if (ch == '\\' && (line[1] == 'x' || line[1] == 'X') &&
+                    isxdigit(line[2]) && isxdigit(line[3])) {
+                /* Escaped special character */
+                ch = to_hex(line[2]) * 16 + to_hex(line[3]);
+                line += 3;
+            }
             tokens[len++] = ch;
             if (ch == quote) {
                 quote = 0;

@@ -665,16 +665,14 @@ static void list_basic(FILE *out, const unsigned char *data, size_t len)
                 if (last_was_token && ch != 0x20) {
                     fputc(' ', out);
                 }
-                fputc(ch, out);
+                if (ch == '\\' && quoted) {
+                    fprintf(out, "\\x%02X", ch);
+                } else {
+                    fputc(ch, out);
+                }
                 last_was_token = 0;
             } else if (quoted) {
-                if (ch < 0xC0) {
-                    fputc('~', out);
-                } else if (ch < 0xE0) {
-                    fputc(ch - 0x80, out);
-                } else {
-                    fputc(ch - 0xC0, out);
-                }
+                fprintf(out, "\\x%02X", ch);
             } else {
                 if (!last_was_token && !first_token) {
                     fputc(' ', out);
