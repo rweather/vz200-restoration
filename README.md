@@ -41,14 +41,9 @@ Brian had 2 or 3 of everything.  He gave me these and kept the rest:
 * Data casette recorder.
 * Floppy disk controller and floppy disk drive.  Plus some floppy disks.
 * Serial port kit.
-* VZ300 - not working.
-* VZ300 in a VZ200 case - also not working.
+* [Two VZ300's that were not working, but one now is.](VZ300_Restoration.md)
 
 The links point at information about the restoration on each item.
-
-The VZ300 in a VZ200 case is the result of a motherboard swap.  Brian still
-has the (working) companion VZ200 in a VZ300 case.  It looks like the original
-owner wanted a VZ200 with a proper mechanical keyboard.  So he made one!
 
 Brian also gifted me a Microbee kit (assembled), two TRS-80 color computers,
 and a TRS-80 printer.
