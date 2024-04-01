@@ -40,13 +40,14 @@ Brian had 2 or 3 of everything.  He gave me these and kept the rest:
 * [16K memory expansion module that has been modified to 32K](Memory_Expansion_32K.md)
 * Data casette recorder.
 * Floppy disk controller and floppy disk drive.  Plus some floppy disks.
+  Drive almost works but has a head crash; needs head re-alignment.
 * Serial port kit.
 * [Two VZ300's that were not working, but one now is.](VZ300_Restoration.md)
 
 The links point at information about the restoration on each item.
 
 Brian also gifted me a Microbee kit (assembled), two TRS-80 color computers,
-and a TRS-80 printer.
+and a TRS-80 printer/plotter.
 
 I will gradually work on restoring these and post the results as I go.
 
