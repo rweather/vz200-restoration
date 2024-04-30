@@ -5,6 +5,8 @@ My friend Brian had two VZ200's and two VZ300's in his shed.  One each of the
 VZ200's and VZ300's were working, so he kept them and gave me the two
 non-working ones.
 
+* [VZ300 Schematic](schematics/VZ300/PDF/VZ300.pdf)
+
 ## Unit 1
 
 The first unit was a plain VZ300 with a mechanical keyboard:
@@ -17,8 +19,8 @@ The RF shield had been removed, but the PCB appeared to be in good condition:
 
 However, when I powered it on the screen showed garbage.  The data and
 address lines looked mostly OK, although one of the data lines was a
-little wonky.  I suspect that the DRAM chip on that data line may have a
-problem, but haven't investigated any further.
+little wonky.  I suspect that the ROM or a DRAM chip on that data line may
+have a problem, but haven't investigated any further.
 
 ## Unit 2
 
