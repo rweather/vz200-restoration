@@ -1804,7 +1804,7 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "HS" (shape output) (at 227.33 73.025 0) (fields_autoplaced)
+  (global_label "~{HS}" (shape output) (at 227.33 73.025 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid ff9ea9d3-ec58-4cbb-bdc4-b769cef21423)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 232.8552 73.025 0)
