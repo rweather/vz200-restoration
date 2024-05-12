@@ -469,6 +469,8 @@ was not tied to ground or 5V.  There is also a spare XOR gate in the
 * [vz200.org](http://vz200.org/)
 * [Bushy's VZ200 website](http://www.vz200.org/bushy/)
 * [VZ200 Technical Reference Manual](http://www.vz200.org/bushy/VZ200_technical_reference_manual.pdf) from Bushy's website.
+* [VZ300 Technical Reference Manual](http://www.vz200.org/bushy/VZ300_tech_manual.pdf) from Bushy's website.
+
 
 ## Acknowledgements
 
@@ -499,13 +501,18 @@ willing to part with it, then please contact me via
 I am also looking for the following to complete my set of early 1980's
 Australian computers:
 
+* Dick Smith Sorcerer
 * Dick Smith System 80 (TRS-80 clone)
 * Dick Smith Super 80 (this was a kit made in concert with Electronics Australia)
 * Microbee
 * Any odd Electronics Australia or ETI kit computers like DREAM-6800, ETI-660, or EDUC-8
 
-Update: I now have the original kit version of the Microbee but am still
-on the lookout for the production Microbee.
+Update (Jan 2024): I now have the original kit version of the Microbee but
+am still on the lookout for the production Microbee.  The restoration is in
+[progress](https://github.com/rweather/microbee-restoration).
+
+Update (May 2024): I also got my hands on a working Exidy Sorcerer I which was
+sold in Australia by Dick Smith, found on [Gumtree](https://www.gumtree.com.au/).
 
 ## License
 
