@@ -184,7 +184,47 @@ DRAM, the system would definitely have trouble starting.
 As a check, I pulled one of the HM4816AP-11 DRAM chips and tested it.
 It was fine.
 
-### Dead test ROM
+### Dead Test ROM
 
-TBD: Can I make a "Dead Test ROM" to test the rest of the system?
-Can use the video RAM as stack and scratch.
+Pulling and replacing chips wasn't getting me anywhere.  So I tried a
+different approach.  I wrote a small assembly program to initialise video
+text mode and fill the screen with a blue checkboard.  I replaced the
+BASIC ROM with the program in EEPROM.
+
+I already knew that video RAM and the MC6847 Video Display Generator (VDG)
+were working.  If a blue checkboard appeared, then the ROM was working too.
+This is what I got:
+
+<img alt="VZ300 Dead Test 1" src="photos/VZ300-unit-1-dead-test-1.jpg" width="860"/>
+
+Yay!  Now we are getting somewhere.  The system is alive enough to
+run code from ROM and display video.  The weird looking chip select is fine.
+
+So I wrote a comprehensive [VZ200/VZ300 Dead Test ROM](src/deadtest/README.md)
+to test video, I/O, RAM, VSYNC timing, everything.  On my VZ200, the result
+looks like this (all good):
+
+<img alt="VZ200 Dead Test" src="src/deadtest/vz200-dead-test.jpg" width="860"/>
+
+On the VZ300, the result was this:
+
+<img alt="VZ300 Dead Test 2" src="photos/VZ300-unit-1-dead-test-2.jpg" width="860"/>
+
+Everything is fine except the DRAM.  But I know that the DRAM chip that I
+pulled (D6) was working fine.  So it looks like Gate Array 3 (U10) is dead.
+That's annoying.
+
+### What is working so far?
+
+So now we know that the CPU, MC6847, ROM, Video RAM, Gate Array 1, and
+Gate Array 2 are all working.  The DRAM chips are probably good, but
+Gate Array 3 is definitely not.
+
+Gate Array 3 is partially working.  It is responsible for dividing the
+17.734MHz clock crystal down to 4.434MHz for the PAL encoder (divide by 4),
+and 3.547MHz for the CPU (divide by 5).  These clocks are working fine.
+It is just the DRAM interface inside Gate Array 3 that is not working.
+
+### Replacing Gate Array 3
+
+TBD
