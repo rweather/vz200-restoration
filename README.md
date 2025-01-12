@@ -491,28 +491,25 @@ Thanks for sharing the enthusiam and teaching me so much!
 
 My first computer was a Dick Smith Cat, which was a rebadged Laser 3000.
 Mine died a long time ago and I sent it to the dump.  I now wish I hadn't!
-The VZ200 I found on eBay is probably the closest I will come to my
-beloved Cat - it is a similar vintage.
 
-If anyone has a Dick Smith Cat or a Laser 3000, working or not, and are
-willing to part with it, then please contact me via
-[email](mailto:rhys.weatherley@gmail.com).
+I thought that the VZ200 I found on eBay would be the closest I would
+ever come to my beloved Cat - it is a similar vintage.  However as of
+July 2024, I now have a Cat again after purchasing one on Gumtree.  Yay!
 
 I am also looking for the following to complete my set of early 1980's
-Australian computers:
+Australian computers.  Some of which I have since found:
 
-* Dick Smith Sorcerer
-* Dick Smith System 80 (TRS-80 clone)
+* Dick Smith Sorcerer (found May 2024)
+* Dick Smith System 80 (TRS-80 clone) (found January 2025)
 * Dick Smith Super 80 (this was a kit made in concert with Electronics Australia)
-* Microbee
-* Any odd Electronics Australia or ETI kit computers like DREAM-6800, ETI-660, or EDUC-8
+* Microbee (found Jan 2024)
+* Electronics Australia or ETI kit computers like DREAM-6800, ETI-660, or EDUC-8
 
-Update (Jan 2024): I now have the original kit version of the Microbee but
-am still on the lookout for the production Microbee.  The restoration is in
-[progress](https://github.com/rweather/microbee-restoration).
+Other restoration information of mine on github:
 
-Update (May 2024): I also got my hands on a working Exidy Sorcerer I which was
-sold in Australia by Dick Smith, found on [Gumtree](https://www.gumtree.com.au/).
+* [Kit Microbee](https://github.com/rweather/microbee-restoration)
+* [Dick Smith Cat](https://github.com/rweather/cat-technical-information)
+* [Dick Smith System 80](https://github.com/rweather/system80-restoration)
 
 ## License
 
