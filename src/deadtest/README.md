@@ -150,6 +150,14 @@ This is unlike the Commodore 64 and other platforms where inserting a
 cartridge physically disables the main ROM.  On those platforms, the
 dead test can be non-invasive.
 
+## Updates
+
+3 February 2025: Adrian Black from [Adrian's Digital Basement](https://adriansbasement.com/)
+found a bug with my dead test while repairing a Laser 200.  Devices with 34K
+of RAM reported as "@@" because I skipped the "33" between the "32" and "34"
+in the RAM size table.  Adrian had some other suggestions to improve the
+VRAM part of the dead test which I will get to shortly.
+
 ## Contact
 
 For more information on this project, to report bugs, or to suggest
