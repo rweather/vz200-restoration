@@ -66,9 +66,13 @@ On the VZ300, a combination of U13 (Gate Array 1) and U14 (Gate Array 2)
 are involved in video RAM access.  If you see something on-screen and
 you hear a beep, then these chips are probably OK.
 
-If the video RAM test fails, then all other tests will be skipped.
-The other tests use the high part of video RAM for the system stack and
-scratch memory.  Working video RAM is essential.
+If the video RAM test fails, then the test will fill the screen with the
+character set twice: forwards in the top half of the screen and backwards
+in the bottom half of the screen.  It will also write "VRAM BAD" in the
+top-left corner.  After that it will flash the background color between
+green and orange while beeping the speaker.  No other tests are possible.
+
+<img alt="VZ200 VRAM Fail" src="vz200-vram-fail.jpg" width="860"/>
 
 ### VSYNC
 
@@ -155,8 +159,8 @@ dead test can be non-invasive.
 3 February 2025: Adrian Black from [Adrian's Digital Basement](https://adriansbasement.com/)
 found a bug with my dead test while repairing a Laser 200.  Devices with 34K
 of RAM reported as "@@" because I skipped the "33" between the "32" and "34"
-in the RAM size table.  Adrian had some other suggestions to improve the
-VRAM part of the dead test which I will get to shortly.
+in the RAM size table.  Adrian had some other suggestions as to how to
+better report VRAM failure, which I also implemented (see above).
 
 ## Contact
 

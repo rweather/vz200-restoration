@@ -255,14 +255,107 @@ compare_test_screen_3:
     ld  (ix),$20        ; ' '
     ld  (ix+1),$0f      ; 'O'
     ld  (ix+2),$0b      ; 'K'
-    jr  video_ram_done
+    jp  video_ram_done
 ;
 video_ram_failed:
-    ld  ix,vz_screen+3*32+27
-    ld  (ix),$42        ; 'B'
-    ld  (ix+1),$41      ; 'A'
-    ld  (ix+2),$44      ; 'D'
-    jp  failed          ; No more tests are possible if video RAM is dead.
+;
+; Fill the text screen buffer in video RAM with the character set,
+; forwards in the top half of the screen and in reverse in the bottom
+; half of the screen.  Hopefully this will reveal which bytes or address
+; lines are bad.
+;
+; To be done in the future: Maybe switch to graphics mode so that any
+; bad blocks in the rest of video RAM are also visible on-screen.
+;
+    ld  hl,vz_screen
+    ld  ix,vz_screen+511
+    ld  a,0
+video_ram_fill:
+    ld  (hl),a
+    ld  (ix),a
+    inc hl
+    dec ix
+    inc a
+    jr  nz,video_ram_fill
+;
+; Write "VRAM BAD" into the top-left corner of the screen.
+;
+    ld  ix,vz_screen
+    ld  (ix),$56        ; 'V'
+    ld  (ix+1),$52      ; 'R'
+    ld  (ix+2),$41      ; 'A'
+    ld  (ix+3),$4D      ; 'M'
+    ld  (ix+4),$60      ; ' '
+    ld  (ix+5),$42      ; 'B'
+    ld  (ix+6),$41      ; 'A'
+    ld  (ix+7),$44      ; 'D'
+    ld  (ix+8),$60      ; ' '
+;
+; Switch back and forth between the green and orange background colors to
+; indicate that something is wrong with VRAM.  Beeping whenever the screen
+; has an orange background color.  No other tests are possible.
+;
+video_blink_background:
+    ld  hl,259          ; Pitch (middle C).
+    ld  de,87           ; Duration (1/3rd of a second).
+vram_fail1_beep_loop:
+    ld  a,$11           ; Speaker A on, Speaker B off, orange background.
+    ld  ($6800),a
+    ld  b,h
+    ld  c,l
+vram_fail1_click_delay_1:
+    dec bc
+    ld  a,b
+    or  c
+    jr  nz,vram_fail1_click_delay_1
+;
+    ld  a,$30           ; Speaker B on, Speaker A off, orange background.
+    ld  ($6800),a
+    ld  b,h
+    ld  c,l
+vram_fail1_click_delay_2:
+    dec bc
+    ld  a,b
+    or  c
+    jr  nz,vram_fail1_click_delay_2
+    dec de
+    ld  a,d
+    or  e
+    jr  nz,vram_fail1_beep_loop
+;
+; Switch to a green background.  We do the same beep loop but this time
+; we don't actually beep the speaker.  This keeps the same timing as above.
+;
+    ld  hl,259          ; Pitch (middle C).
+    ld  de,87           ; Duration (1/3rd of a second).
+vram_fail2_beep_loop:
+    ld  a,$00           ; Speaker A off, Speaker B off, green background.
+    ld  ($6800),a
+    ld  b,h
+    ld  c,l
+vram_fail2_click_delay_1:
+    dec bc
+    ld  a,b
+    or  c
+    jr  nz,vram_fail2_click_delay_1
+;
+    ld  a,$00           ; Speaker B off, Speaker A off, green background.
+    ld  ($6800),a
+    ld  b,h
+    ld  c,l
+vram_fail2_click_delay_2:
+    dec bc
+    ld  a,b
+    or  c
+    jr  nz,vram_fail2_click_delay_2
+    dec de
+    ld  a,d
+    or  e
+    jr  nz,vram_fail2_beep_loop
+;
+; No more tests are possible if video RAM is bad.  Go around again.
+;
+    jr  video_blink_background
 ;
 video_ram_done:
 
