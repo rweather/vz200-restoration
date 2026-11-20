@@ -466,9 +466,9 @@ wait_for_vsync_int_2:
     jr  c,vsync_freq_incorrect
     cp  61
     jr  c,vsync_freq_50hz
-    cp  69
+    cp  63
     jr  c,vsync_freq_incorrect
-    cp  73
+    cp  68
     jr  nc,vsync_freq_incorrect
     ld  (ix-1),$36          ; '6'
     ld  (ix),$30            ; '0'
